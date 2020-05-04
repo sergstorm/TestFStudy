@@ -18,7 +18,7 @@ public class InputRim
                 int sub = (arrayList.indexOf(a)+1)-(arrayList.indexOf(b)+1);
                 if (sub<0)
                 {
-                    System.out.println("-"+arrayList.get(abs(sub+1))+"  Sub "+sub);
+                    System.out.println("-"+arrayList.get(abs(sub+1)));
                 }
                 if(sub == 0)
                 {
@@ -46,6 +46,10 @@ public class InputRim
             {
                 int mult = (arrayList.indexOf(a)+1)*(arrayList.indexOf(b)+1);
                 String multp = String.valueOf(mult);
+                if (mult<10)
+                {
+                    System.out.println(arrayList.get(mult-1));
+                }
                 String sdf[] = multp.split("");
                 if (mult%10==0)
                 {
@@ -60,19 +64,21 @@ public class InputRim
                     if (mult==90) System.out.println("XC");
                     if (mult==100) System.out.println("C"); //break;
                 }
-
-                int a1 = Integer.parseInt(sdf[0]);
-                int b2 = Integer.parseInt(sdf[1]);
-                if (a1==1 && b2!=0) System.out.println(arrayList.get(9)+arrayList.get(b2-1));
-                if (a1==2 && b2!=0) System.out.println(arrayList.get(9)+arrayList.get(9)+arrayList.get(b2-1));
-                if (a1==3 && b2!=0) System.out.println(arrayList.get(9)+arrayList.get(9)+arrayList.get(9)+arrayList.get(b2-1));
-                if (a1==4 && b2!=0) System.out.println("XL"+arrayList.get(b2-1));
-                if (a1==5 && b2!=0) System.out.println("L"+arrayList.get(b2-1));
-                if (a1==6 && b2!=0) System.out.println("LX"+arrayList.get(b2-1));
-                if (a1==7 && b2!=0) System.out.println("LXX"+arrayList.get(b2-1));
-                if (a1==8 && b2!=0) System.out.println("LXXX"+arrayList.get(b2-1));
-                if (a1==9 && b2!=0) System.out.println("LC"+arrayList.get(b2-1));
-
+                   if(mult>10) {
+                       int a1 = Integer.parseInt(sdf[0]);
+                       int b2 = Integer.parseInt(sdf[1]);
+                       if (a1 == 1 && b2 != 0) System.out.println(arrayList.get(9) + arrayList.get(b2 - 1));
+                       if (a1 == 2 && b2 != 0)
+                           System.out.println(arrayList.get(9) + arrayList.get(9) + arrayList.get(b2 - 1));
+                       if (a1 == 3 && b2 != 0)
+                           System.out.println(arrayList.get(9) + arrayList.get(9) + arrayList.get(9) + arrayList.get(b2 - 1));
+                       if (a1 == 4 && b2 != 0) System.out.println("XL" + arrayList.get(b2 - 1));
+                       if (a1 == 5 && b2 != 0) System.out.println("L" + arrayList.get(b2 - 1));
+                       if (a1 == 6 && b2 != 0) System.out.println("LX" + arrayList.get(b2 - 1));
+                       if (a1 == 7 && b2 != 0) System.out.println("LXX" + arrayList.get(b2 - 1));
+                       if (a1 == 8 && b2 != 0) System.out.println("LXXX" + arrayList.get(b2 - 1));
+                       if (a1 == 9 && b2 != 0) System.out.println("LC" + arrayList.get(b2 - 1));
+                   }
                // System.out.println("MulTiplication = : "+mult);
             }
 
